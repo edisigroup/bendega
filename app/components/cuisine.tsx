@@ -9,20 +9,21 @@ export default function Cuisine() {
           <div className="flex flex-col items-start space-y-6">
               <h2 className="text-4xl font-bold text-black">Our Cuisine</h2>
               <p className="text-black/90 text-lg">
-                Resep lokal kuliner nusantara yang terinspirasi dari traditional street food dengan rasa authentic
-                disajikan secara modern.
+                Resep lokal kuliner nusantara yang <br/>
+                terinspirasi dari traditional street food dengan <br/>
+                rasa authentic disajikan secara modern.
               </p>
               <Button variant="secondary" className="bg-[#c26545] hover:bg-[#b55a3b] text-white font-normal uppercase border-none">
                 Pesan
               </Button>
             </div>
-            <div className="relative w-full h-[400px] rounded-md overflow-hidden">
+            <div className="relative w-full h-fit rounded-xl overflow-hidden">
               <Image
                 width={320}
-                height={400}
-                src="/pura.png"
+                height={320}
+                src="/pura-2.png"
                 alt="Bendega restaurant interior"
-                className="md:ml-24 object-cover"
+                className="md:ml-24 h-[480px] object-cover rounded-xl"
                 priority
               />
             </div>

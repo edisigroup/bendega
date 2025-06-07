@@ -1,4 +1,4 @@
-import { link } from "fs"
+// import { link } from "fs"
 import { TestimonialCard } from "./testimonial-card"
 
 export function TestimonialsSection() {
@@ -31,7 +31,7 @@ export function TestimonialsSection() {
 
   return (
     <section className="py-12 px-6 md:px-12">
-      <h2 className="text-2xl font-bold text-center mb-10">The Trust We've Earned</h2>
+      <h2 className="text-2xl font-bold text-center mb-10">{"The Trust We've Earned"}</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial) => (
           <TestimonialCard
