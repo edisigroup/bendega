@@ -12,11 +12,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Menu", href: "/menu" },
+  { label: "Menu", href: "/" },
   { label: "Tentang Kami", href: "/tentang-kami" },
   { label: "Meeting", href: "/meeting" },
   { label: "Galeri", href: "/galeri" },
-  { label: "Lokasi", href: "/lokasi" },
 ]
 
 export function Navbar() {
@@ -30,7 +29,7 @@ export function Navbar() {
     <nav className="relative bg-[#c96c45] text-white py-4 px-6 md:px-12">
       <div className="flex items-center justify-between">
         <Link href="/" className="font-serif text-2xl italic">
-          <span className="text-white">bendega</span>
+          <span className="text-white">Bendega</span>
         </Link>
 
         {/* Desktop Navigation */}

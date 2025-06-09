@@ -8,7 +8,7 @@ export function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div className="col-span-1 md:col-span-1">
           <Link href="/" className="font-serif text-2xl italic text-[#c96c45]">
-            bendega
+            Bendega
           </Link>
           <p className="mt-4 text-sm text-gray-600">
             Berdiri sejak tahun 1996, Bendega adalah kombinasi & perpaduan mempersembahkan kuliner Arak Bali &
@@ -64,7 +64,7 @@ export function Footer() {
           ></iframe>
       </div>
       <div className="border-t border-gray-200 pt-6 text-center text-sm text-gray-500">
-        <p>© 2025 Bendega Bali. All Rights Reserved</p>
+        <p>© 2025 Bendega Bali</p>
       </div>
     </footer>
   )

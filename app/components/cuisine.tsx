@@ -7,7 +7,7 @@ export default function Cuisine() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col items-start space-y-6">
-              <h2 className="text-4xl font-bold text-black">Our Cuisine</h2>
+              <h2 className="text-4xl font-bold text-black">Cita Rasa Kuliner Kami</h2>
               <p className="text-black/90 text-lg">
                 Resep lokal kuliner nusantara yang <br/>
                 terinspirasi dari traditional street food dengan <br/>
