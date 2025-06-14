@@ -13,23 +13,23 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ name, rating, link, date, comment, avatarSrc, initials }: TestimonialCardProps) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className={`${initials==="DT" &&"bg-gradient-to-r from-[#CB6743] to-orange-400 sm:bg-none text-white sm:text-black shadow-lg sm:shadow-none"} text-black hover:text-white cursor-pointer flex flex-col gap-2 border hover:border-none hover:shadow-lg hover:shadow-[#CB6743] hover:-translate-y-2 hover:text-white hover:bg-gradient-to-r from-[#CB6743] to-orange-400 duration-200 transition all p-4 rounded-lg`}>
       <div className="flex items-center gap-3">
         <Avatar>
           <AvatarImage src={avatarSrc || "/placeholder.svg"} alt={name} />
-          <AvatarFallback>{initials}</AvatarFallback>
+          <AvatarFallback className="bg-[#CB6743]">{initials}</AvatarFallback>
         </Avatar>
         <div>
           <h4 className="font-medium text-sm">{name}</h4>
           <div className="flex items-center gap-2">
             <StarRating rating={rating} size="sm" />
-            <span className="text-xs text-gray-500">{date}</span>
+            <span className="text-xs">{date}</span>
           </div>
         </div>
       </div>
-      <p className="text-sm text-gray-700">{comment}</p>
-      <a href={link} target="blank" rel="noopener noreferrer" className="text-xs text-gray-500 hover:underline">
-        Read more
+      <p className="text-sm">{comment}</p>
+      <a href={link} target="blank" rel="noopener noreferrer" className="text-xs hover:underline">
+        Lebih lengkap...
       </a>
     </div>
   )

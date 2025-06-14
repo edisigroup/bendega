@@ -19,19 +19,32 @@ export function SocialMedia() {
 
         <div className="w-full flex justify-center">
           <div className="max-w-[1024px] w-full">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 border-b border-[#c96c45] pb-4">
               {socmed.map((eachSocmed) => (
                 <div key={eachSocmed.key} className="col-span-1">
                   <a
                     href="https://www.instagram.com/bendega.bali"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="group relative block w-full h-auto overflow-hidden"
                   >
+                    {/* Social Media Image */}
                     <img
                       src={eachSocmed.src}
                       alt="socmed"
-                      className="w-full h-auto hover:shadow-xl hover:shadow-[#c96c45]/60 hover:-translate-y-2 transition-all duration-300"
+                      className="w-full h-auto transition-all duration-300 group-hover:blur-sm group-hover:shadow-[rgba(0,0,0,0.5)_-10px_10px_20px]"
                     />
+
+                    {/* White Circular Background */}
+                    <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-white rounded-full flex items-center justify-center">
+                        <img
+                          src="/instagram.png" // Replace with your actual path
+                          alt="Instagram"
+                          className="size-18 object-contain"
+                        />
+                      </div>
+                    </div>
                   </a>
                 </div>
               ))}

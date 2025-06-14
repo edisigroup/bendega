@@ -24,9 +24,9 @@ export default function Home() {
             <div className="w-full">
               <p className="text-black/90 text-sm">
                 Berdiri sejak tahun 1996 -Bendega selalu konsisten & semangat <br />
-                mempromosikan kuliner khas Bali & Nusantara. Terinspirasi dari resep resep <br />
-                legenda dan rumahan yang diwariskan turun temurun dari Sabang sampai <br />
-                Merauke , kami ingin memperkenalkan kekayaan kuliner nusantara. Selama <br />
+                mempromosikan kuliner khas Bali & Nusantara. Terinspirasi dari resep resep 
+                legenda dan rumahan yang diwariskan turun temurun dari Sabang sampai 
+                Merauke , kami ingin memperkenalkan kekayaan kuliner nusantara. Selama
                 bertahun tahun
               </p>
             </div>

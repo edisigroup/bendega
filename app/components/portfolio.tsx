@@ -1,22 +1,24 @@
+import Image from "next/image";
+
 export function Portfolio() {
   const portfolio = [
-    {key:1, src:"/portfolio/portfolio-1.png"},
-    {key:2, src:"/portfolio/portfolio-2.png"},
+    {key:1, src:"/portfolio/portfolio-2.png"},
+    {key:2, src:"/portfolio/portfolio-1.png"},
     {key:3, src:"/portfolio/portfolio-3.png"},
   ]
   return (
     <div className="flex flex-col gap-2">
-        <section className="py-12 px-6 md:px-12 bg-[#CB6743]">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <section className="py-12 px-6 md:px-12 bg-gradient-to-br from-[#CB6743] to-orange-400">
+              <div className="w-full justify-center flex gap-5">
                 {portfolio.map((eachPortfolio)=>{
                   return (
-                    <div className="col-span-1" key={eachPortfolio.key}>
-                        <img                     
+                    <div className={`${eachPortfolio.key>1 && "hidden sm:block"}`} key={eachPortfolio.key}>
+                        <Image                     
                         src={eachPortfolio.src}
                         alt="socmed"
-                        width={64}
-                        height={96}
-                        className="min-w-full w-28 h-96 hover:shadow-xl hover:scale-105 transition-all duration-300"
+                        width={1020}
+                        height={890}
+                        className={`w-full min-w-[280px] h-[320px] hover:shadow-xl hover:scale-105 transition-all duration-300`}
                         />
                     </div>
                   )

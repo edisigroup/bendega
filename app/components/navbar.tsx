@@ -18,15 +18,15 @@ const navItems: NavItem[] = [
   { label: "Galeri", href: "/galeri" },
 ]
 
-export function Navbar() {
+export function Navbar({isTransparent=false}:{isTransparent?:boolean}) {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-
+  
   return (
-    <nav className="relative bg-[#c96c45] text-white py-4 px-6 md:px-12">
+    <nav className={`${isTransparent===true?"bg-[#c96c45] sm:bg-transparent absolute w-full":"relative bg-[#c96c45]"}  text-white py-4 px-6 md:px-12`}>
       <div className="flex items-center justify-between">
         <Link href="/" className="font-serif text-2xl italic">
           <span className="text-white">Bendega</span>
@@ -35,7 +35,7 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href} className="text-white hover:text-white/80 transition-colors">
+            <Link key={item.label} href={item.href} className="uppercase text-white hover:text-white/80 transition-colors">
               {item.label}
             </Link>
           ))}
@@ -49,7 +49,7 @@ export function Navbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="size-8" /> : <Menu className="size-8" />}
         </Button>
       </div>
 

@@ -5,11 +5,11 @@ export default function Hero({isCuisine=true, isAbout=true}:{isCuisine?: boolean
     return (
         <>
         <div
-            className="w-full h-[420px] bg-cover bg-center bg-no-repeat"
+            className={`w-full ${isAbout ? 'h-[420px] bg-center' : 'h-[520px] bg-top'} bg-cover  bg-no-repeat`}
             style={{
                 backgroundImage: `url(${isAbout ? '/hero.jpg' : '/chef.png'})`,
             }}
-            ></div>
+            />
         {isCuisine && <Cuisine />}
         </>
       
