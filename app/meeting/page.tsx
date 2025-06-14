@@ -1,6 +1,7 @@
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { SocialMedia } from "../components/social-media";
+import { Email } from "../components/email"
 import Image from "next/image";
 
 export default function Home() {
@@ -91,6 +92,8 @@ export default function Home() {
             </div>
           </div>
       </div>
+
+      <Email />
 
       <SocialMedia />
       <Footer />
