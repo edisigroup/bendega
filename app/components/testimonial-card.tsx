@@ -13,7 +13,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ name, rating, link, date, comment, avatarSrc, initials }: TestimonialCardProps) {
   return (
-    <div className={`${initials==="DT" &&"bg-gradient-to-r from-[#CB6743] to-orange-400 sm:bg-none text-white sm:text-black shadow-lg sm:shadow-none"} text-black hover:text-white cursor-pointer flex flex-col gap-2 border hover:border-none hover:shadow-lg hover:shadow-[#CB6743] hover:-translate-y-2 hover:text-white hover:bg-gradient-to-r from-[#CB6743] to-orange-400 duration-200 transition all p-4 rounded-lg`}>
+    <div className={`text-black hover:text-white cursor-pointer flex flex-col gap-2 border hover:border-none hover:shadow-lg hover:shadow-[#CB6743] hover:-translate-y-2 hover:text-white hover:bg-gradient-to-r from-[#CB6743] to-orange-400 duration-200 transition all p-4 rounded-lg`}>
       <div className="flex items-center gap-3">
         <Avatar>
           <AvatarImage src={avatarSrc || "/placeholder.svg"} alt={name} />

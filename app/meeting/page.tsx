@@ -92,9 +92,7 @@ export default function Home() {
             </div>
           </div>
       </div>
-
       <Email />
-
       <SocialMedia />
       <Footer />
     </main>

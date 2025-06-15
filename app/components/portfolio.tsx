@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function Portfolio() {
   const portfolio = [
-    {key:1, src:"/portfolio/portfolio-2.png"},
-    {key:2, src:"/portfolio/portfolio-1.png"},
-    {key:3, src:"/portfolio/portfolio-3.png"},
+    {key:1, src:"/galeri/galeri (13).png"},
+    {key:2, src:"/galeri/galeri(9).png"},
+    {key:3, src:"/galeri/galeri (12).png"},
   ]
   return (
     <div className="flex flex-col gap-2">
@@ -12,7 +12,7 @@ export function Portfolio() {
               <div className="w-full justify-center flex gap-5">
                 {portfolio.map((eachPortfolio)=>{
                   return (
-                    <div className={`${eachPortfolio.key>1 && "hidden sm:block"}`} key={eachPortfolio.key}>
+                    <div className={`${eachPortfolio.key>1 && "hidden lg:block"}`} key={eachPortfolio.key}>
                         <Image                     
                         src={eachPortfolio.src}
                         alt="socmed"

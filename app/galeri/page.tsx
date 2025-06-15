@@ -38,9 +38,10 @@ export default function Galeri() {
           <h2 className="text-base tracking-wide">CITA RASA ASLI INDONESIA</h2>
         </div>
       </div>
+
       <div className="w-full h-[420px] mx-auto flex items-center justify-center">
         <div className="w-full h-full md:w-1/3 flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center space-y-6 px-4 md:px-12">
+          <div className="flex flex-col gap-4 items-center justify-center text-center space-y-6 px-4 md:px-12">
             <p className="text-black/90 text-sm">
               Kami percaya bahwa makanan adalah bahasa cinta Indonesia. Di
               Bendega, setiap masakan diracik dengan rasa rumahan, penuh rempah
