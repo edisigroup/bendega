@@ -7,26 +7,31 @@ export function Email() {
     const today = new Date();
     return today.toISOString().split("T")[0]; // Formats as 'YYYY-MM-DD'
   };
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    date: getTodayDate(), 
-    time: "",
-    guests: "",
+    date: getTodayDate(),
+    time: "08:00 AM",
+    guests: "1",
+    location: "Bendega Renon",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     const messageBody = `
         Hello, Bendega!
             Reservation Details:
+            - Name: ${formData.name}
             - Number of Guests: ${formData.guests}
             - Date: ${formData.date}
             - Time: ${formData.time}
             - Phone: ${formData.phone}
         `;
-        const phoneNumber = '';
-        const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(messageBody)}`;
-        window.location.href = whatsappLink;
+    const phoneNumber = "+6281227014734";
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      messageBody
+    )}`;
+    window.open(whatsappLink, "_blank")?.focus();
     e.preventDefault();
   };
 
@@ -35,7 +40,7 @@ export function Email() {
   };
 
   return (
-    <div className="relative p-4 my-20 w-full flex flex-col justify-center h-[600px] bg-cover bg-center bg-no-repeat bg-[url('/cuisine3.jpg')]">
+    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[600px] bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(20).jpg')]">
       <div className="absolute sm:block hidden right-6 h-[680px] sm:w-[280px] lg:w-[420px] bg-[#c96c45] -top-10 rounded-xl p-8">
         <div className="w-full h-full flex flex-col justify-center items-center text-center">
           <span className="text-4xl font-bold text-white">
@@ -69,6 +74,20 @@ export function Email() {
 
           {/* FORM */}
           <form onSubmit={handleSubmit}>
+            <select
+              id="location"
+              value={formData.location}
+              onChange={(e) => handleInputChange("location", e.target.value)}
+              required
+              aria-label="Lokasi"
+              className="mb-4 appearance-none w-full bg-white placeholder-gray-600 text-black p-3 rounded-lg focus:outline-none"
+            >
+              <option value="Bendega Renon">Bendega Renon</option>
+              <option value="Bendega Jimbaran">Bendega Jimbaran</option>
+              <option value="Meeting/Private Function/Event">
+                Meeting/Private Function/Event
+              </option>
+            </select>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <input
                 id="name"
@@ -155,7 +174,7 @@ export function Email() {
             <div className="grid grid-cols-3 mt-4">
               <button
                 type="submit"
-                className="col-span-2 sm:col-span-1 w-full bg-[#c96c45] text-white py-2 px-4 rounded-lg font-medium"
+                className="col-span-2 sm:col-span-1 w-full bg-[#c96c45] hover:bg-[#c96c45]/80 cursor-pointer text-white py-2 px-4 rounded-lg font-medium"
               >
                 Pesan Sekarang
               </button>

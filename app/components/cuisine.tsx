@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Cuisine() {
   return (
@@ -14,12 +15,19 @@ export default function Cuisine() {
               Resep lokal kuliner nusantara yang terinspirasi dari traditional
               street food dengan rasa authentic disajikan secara modern.
             </p>
-            <Button
-              variant="secondary"
-              className="bg-[#c26545] hover:bg-[#b55a3b] text-white font-normal uppercase border-none"
+            <Link
+              href={`https://api.whatsapp.com/send?phone=${"+6281227014734"}&text=${encodeURIComponent(
+                "Halo! Saya ingin pesan..."
+              )}`}
             >
-              Pesan
-            </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                className="bg-[#c26545] hover:shadow-lg hover:bg-[#c26545] hover:shadow-[#c26545] text-white font-normal uppercase border-none"
+              >
+                Pesan
+              </Button>
+            </Link>
           </div>
           <div className="relative w-full h-fit sm:rounded-xl overflow-hidden flex justify-center">
             <Image

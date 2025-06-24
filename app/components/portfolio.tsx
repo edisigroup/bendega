@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function Portfolio() {
   const portfolio = [
-    {key:1, src:"/galeri/galeri (13).png"},
+    {key:1, src:"/galeri/galeri(19).jpg"},
     {key:2, src:"/galeri/galeri(9).png"},
-    {key:3, src:"/galeri/galeri (12).png"},
+    {key:3, src:"/galeri/galeri(16).jpg"},
   ]
   return (
     <div className="flex flex-col gap-2">

@@ -1,7 +1,7 @@
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { Button } from "@/components/ui/button";
-import Link from "next/link"
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Galeri() {
@@ -16,9 +16,9 @@ export default function Galeri() {
     { id: 8, src: "/galeri/galeri (8).png" },
     { id: 9, src: "/galeri/galeri (9).png" }, // Top-left large image
     { id: 10, src: "/galeri/galeri (10).png" }, // Bottom-right horizontal image (outdoor seating)
-    { id: 11, src: "/galeri/galeri (11).png" }, // Bottom-left vertical image (swings)
-    { id: 12, src: "/galeri/galeri (12).png" },
-    { id: 13, src: "/galeri/galeri (13).png" },
+    { id: 11, src: "/galeri/galeri(17).jpg" }, // Bottom-left vertical image (swings)
+    { id: 12, src: "/galeri/galeri(20).jpg" },
+    { id: 13, src: "/galeri/galeri(18).jpg" },
     { id: 14, src: "/galeri/galeri (14).png" },
   ];
 
@@ -31,8 +31,8 @@ export default function Galeri() {
       <div className="relative w-full h-screen">
         {/* Background image */}
         <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(10).png')] z-0" />
-        {/* Gradient overlay (behind Navbar) */}4
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#c96c45]/60 to-[#c96c45]/40 pointer-events-none z-10" />
+        {/* Gradient overlay (behind Navbar) */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#c96c45]/50 to-[#c96c45]/10 pointer-events-none z-10" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-30">
           <h2 className="uppercase text-6xl sm:text-8xl">Bendega</h2>
           <h2 className="text-base tracking-wide">CITA RASA ASLI INDONESIA</h2>
@@ -49,14 +49,18 @@ export default function Galeri() {
               seluruh nusantara dengan rasa autentik, bahan lokal terbaik, dan
               sentuhan khas.
             </p>
-            <Link href="/">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="bg-[#c26545] hover:shadow-lg hover:bg-[#c26545] hover:shadow-[#c26545] text-white font-normal uppercase border-none"
+            <Link
+              href={`https://api.whatsapp.com/send?phone=${"+6281227014734"}&text=${encodeURIComponent(
+                "Halo! Saya ingin bertanya!"
+              )}`}
             >
-              Hubungi Kami
-            </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                className="bg-[#c26545] hover:shadow-lg hover:bg-[#c26545] hover:shadow-[#c26545] text-white font-normal uppercase border-none"
+              >
+                Hubungi Kami
+              </Button>
             </Link>
           </div>
         </div>
@@ -170,10 +174,10 @@ export default function Galeri() {
             alt="Swings in a garden area"
             className="w-full h-full object-cover px-1"
             priority
-          />          
+          />
         </div>
         <div className="w-1/2 sm:w-1/3 h-full flex flex-col">
-        <Image
+          <Image
             width={400}
             height={240}
             src={images[4].src}

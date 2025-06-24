@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 export function SocialMedia() {
   const socmed = [
-    { key: 1, src: "/socmed/socmed-1.png" },
-    { key: 2, src: "/socmed/socmed-2.png" },
+    { key: 4, src: "/galeri/galeri(16).jpg" },
     { key: 3, src: "/socmed/socmed-3.png" },
-    { key: 4, src: "/socmed/socmed-4.png" },
-    { key: 5, src: "/socmed/socmed-5.png" },
-    { key: 6, src: "/socmed/socmed-6.png" },
-    { key: 7, src: "/socmed/socmed-7.png" },
+    { key: 1, src: "/socmed/socmed-1.png" },
+    { key: 6, src: "/galeri/galeri(18).jpg" },
+    { key: 5, src: "/galeri/galeri(17).jpg" },
+    { key: 2, src: "/socmed/socmed-2.png" },
+    { key: 7, src: "/galeri/galeri(19).jpg" },
     { key: 8, src: "/socmed/socmed-8.png" },
   ];
 
@@ -29,16 +31,20 @@ export function SocialMedia() {
                     className="group relative block w-full h-auto overflow-hidden"
                   >
                     {/* Social Media Image */}
-                    <img
+                    <Image
                       src={eachSocmed.src}
                       alt="socmed"
-                      className="w-full h-auto transition-all duration-300 group-hover:blur-sm group-hover:shadow-[rgba(0,0,0,0.5)_-10px_10px_20px]"
+                      width={340}
+                      height={480}
+                      className="w-full h-[320px] transition-all duration-300 group-hover:blur-sm group-hover:shadow-[rgba(0,0,0,0.5)_-10px_10px_20px]"
                     />
 
                     {/* White Circular Background */}
                     <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="bg-white rounded-full flex items-center justify-center">
-                        <img
+                        <Image
+                          width={72}
+                          height={72}
                           src="/instagram.png" // Replace with your actual path
                           alt="Instagram"
                           className="size-18 object-contain"
