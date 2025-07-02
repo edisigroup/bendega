@@ -1,5 +1,8 @@
+"use client";
+
 import Cuisine from "./cuisine";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero({
   isCuisine = true,
@@ -18,7 +21,14 @@ export default function Hero({
         className={`w-full h-full sm:h-[calc(100vh-64px)]`}
         priority
       />
-      {isCuisine && <Cuisine />}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }} // Start lower and invisible
+        animate={{ opacity: 1, y: 0 }} // End at original position and visible
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full"
+      >
+        {isCuisine && <Cuisine />}
+      </motion.div>
     </>
   );
 }

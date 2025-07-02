@@ -3,13 +3,13 @@ import Image from "next/image";
 export function SocialMedia() {
   const socmed = [
     { key: 4, src: "/galeri/galeri(16).jpg" },
-    { key: 3, src: "/socmed/socmed-3.png" },
-    { key: 1, src: "/galeri/galeri(21).png" },
+    { key: 3, src: "/galeri/galeri(24).jpeg" },
+    { key: 1, src: "/galeri/galeri(21).jpg" },
     { key: 6, src: "/galeri/galeri(18).jpg" },
     { key: 5, src: "/galeri/galeri(17).jpg" },
-    { key: 2, src: "/socmed/socmed-2.png" },
-    { key: 7, src: "/galeri/galeri(19).jpg" },
-    { key: 8, src: "/socmed/socmed-8.png" },
+    { key: 2, src: "/galeri/galeri(19).jpg" },
+    { key: 7, src: "/galeri/galeri(22).jpg" },
+    { key: 8, src: "/galeri/galeri(20).jpg" },
   ];
 
   return (

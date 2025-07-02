@@ -15,12 +15,11 @@ export function Footer() {
               Bendega
             </Link>
             <p className="mt-4 text-sm text-gray-600">
-              Berdiri sejak tahun 1996, Bendega adalah kombinasi & perpaduan
-              mempersembahkan kuliner Arak Bali & Nusantara.
+              Berdiri sejak tahun 1996 - Bendega selalu konsisten mempromosikan kuliner khas Bali & Nusantara. 
             </p>
             <p className="mt-4 text-sm text-gray-600">
-              Tempat ini dari masa hingga sekarang dan terus berkembang dari
-              Sabang sampai Merauke.
+              Terinspirasi dari resep - resep legenda dan rumahan yang diwariskan turun temurun dari Sabang sampai Merauke , kami ingin memperkenalkan kekayaan kuliner nusantara. Selama bertahun tahun , Bendega mengkombinasikan resep kuliner tradisional terbaik dengan bahan baku yang fresh dan “locally sourced”, diolah dan disajikan secara modern tanpa mengurangi rasa authentic. Melalui inovasi & adaptasi , Bendega 
+              selalu menyajikan pilihan kuliner Nusantara terbaik agar dapat dinikmati dari generasi ke generasi
             </p>
           </div>
 
