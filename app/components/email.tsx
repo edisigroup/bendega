@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export function Email() {
@@ -17,7 +18,10 @@ export function Email() {
     location: "Bendega Renon",
   });
 
+  let phoneNumber = "+6281227014734";
   const handleSubmit = (e: React.FormEvent) => {
+    if(formData.location==="Bendega Renon"){phoneNumber="+6287764078434"}
+    if(formData.location==="Bendega Jimbaran"){phoneNumber="+6281246032899"}
     const messageBody = `
         Hello, Bendega!
             Reservation Details:
@@ -27,7 +31,6 @@ export function Email() {
             - Time: ${formData.time}
             - Phone: ${formData.phone}
         `;
-    const phoneNumber = "+6281227014734";
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
       messageBody
     )}`;
@@ -40,7 +43,7 @@ export function Email() {
   };
 
   return (
-    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[600px] bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(20).jpg')]">
+    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[680px] bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(20).jpg')]">
       <div className="absolute sm:block hidden right-6 h-[680px] sm:w-[280px] lg:w-[420px] bg-[#c96c45] -top-10 rounded-xl p-8">
         <div className="w-full h-full flex flex-col justify-center items-center text-center">
           <span className="text-4xl font-bold text-white">
@@ -49,24 +52,48 @@ export function Email() {
           <span className="text-base mt-4 text-white">
             Untuk reservasi dan informasi
           </span>
-          <span className="font-bold my-10 text-black text-2xl">
-            📞 (0361) 249555
-          </span>
-          <span className="text-base text-white">📍 Bendega</span>
-          <span className="text-sm px-8 text-white">
-            {" "}
-            Dangin Puri Klod, Denpasar Timur, Kota Denpasar, Bali
-          </span>
+          {formData.location === "Bendega Renon" && (
+            <Link href={"https://g.co/kgs/twJDomz"} className="flex flex-col">
+              <span className="font-bold my-10 text-black text-2xl">
+                📞 087764078434
+              </span>
+              <span className="text-base text-white">📍 Bendega Renon</span>
+              <span className="text-sm px-8 text-white">
+                {" "}
+                Jl. Cok Agung Tresna No.37, Dangin Puri Klod, Kec. Denpasar Tim., Kota Denpasar, Bali 80234
+              </span>
+            </Link>
+          )}
+          {formData.location === "Bendega Jimbaran" && (
+            <Link href={"https://g.co/kgs/qEap4Ja"} className="flex flex-col">
+              <span className="font-bold my-10 text-black text-2xl">
+                📞 081246032899
+              </span>
+              <span className="text-base text-white">📍 Bendega Jimbaran</span>
+              <span className="text-sm px-8 text-white">
+                {" "}
+                Jl. Raya Kampus Unud No.89, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361
+              </span>
+            </Link>
+          )}
+          {formData.location === "Meeting/Private Function/Event" && (
+            <>
+              <span className="font-bold my-10 text-black text-2xl">
+                📞 (0361) 249555
+              </span>
+              <span className="text-base text-white">📍 Meeting/Private Function/Event</span>
+            </>
+          )}
         </div>
       </div>
       <div className="w-full flex justify-start items-center px-4 sm:pl-12">
         <div className="flex flex-col w-full sm:w-1/2 rounded-xl">
-          <span className="text-5xl font-bold text-white">
+          <span className="text-4xl md:text-5xl font-bold text-white">
             Reservasi Sekarang
           </span>
           <div className="relative flex py-6 items-center">
             <div className="flex-grow border-t border-white"></div>
-            <span className="flex-shrink mx-4 text-sm text-white uppercase bg-amber-600 p-1">
+            <span className="flex-shrink sm:mx-4 text-sm text-white uppercase bg-amber-600 p-1">
               Tentukan waktu bersantap Anda
             </span>
             <div className="flex-grow border-t border-white"></div>

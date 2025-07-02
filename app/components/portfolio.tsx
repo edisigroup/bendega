@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Portfolio() {
   const portfolio = [
     {key:1, src:"/galeri/galeri(19).jpg"},
-    {key:2, src:"/galeri/galeri(9).png"},
+    {key:2, src:"/galeri/galeri(22).jpg"},
     {key:3, src:"/galeri/galeri(16).jpg"},
   ]
   return (

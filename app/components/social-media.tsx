@@ -4,7 +4,7 @@ export function SocialMedia() {
   const socmed = [
     { key: 4, src: "/galeri/galeri(16).jpg" },
     { key: 3, src: "/socmed/socmed-3.png" },
-    { key: 1, src: "/socmed/socmed-1.png" },
+    { key: 1, src: "/galeri/galeri(21).png" },
     { key: 6, src: "/galeri/galeri(18).jpg" },
     { key: 5, src: "/galeri/galeri(17).jpg" },
     { key: 2, src: "/socmed/socmed-2.png" },
@@ -21,9 +21,9 @@ export function SocialMedia() {
 
         <div className="w-full flex justify-center">
           <div className="max-w-[1024px] w-full">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 border-b border-[#c96c45] pb-4">
-              {socmed.map((eachSocmed) => (
-                <div key={eachSocmed.key} className="col-span-1">
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 border-b border-[#c96c45] pb-4">
+              {socmed.map((eachSocmed,index) => (
+                <div key={eachSocmed.key} className={`${index>2&&`hidden sm:block`}`}>
                   <a
                     href="https://www.instagram.com/bendega.bali"
                     target="_blank"

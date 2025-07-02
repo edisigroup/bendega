@@ -73,9 +73,7 @@ export function Footer() {
           <div className="col-span-1">
             <h3 className="font-medium mb-4">Hubungi Kami</h3>
             <div className="mt-4 flex">
-              <div
-                className="flex gap-2 text-sm text-gray-600"
-              >
+              <div className="flex gap-2 text-sm text-gray-600">
                 <MailIcon className="h-5 w-5 text-gray-600 hover:text-[#c96c45] transition-colors duration-200" />
                 <span>Marketingbendega@edisigroup.com</span>
               </div>
@@ -87,15 +85,26 @@ export function Footer() {
         <h3 className="font-medium mb-4 px-6 md:px-12 text-[#c96c45]">
           Lokasi
         </h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2601070104856!2d115.22556687417054!3d-8.666795188206313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2408c4dfd9f85%3A0x2d0ee0e62af3d942!2sBendega%20Restaurant!5e0!3m2!1sen!2sid!4v1745166218827!5m2!1sen!2sid"
-          width="300"
-          height="260"
-          allowFullScreen={true}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full"
-        ></iframe>
+        <div className="flex flex-col md:flex-row w-full gap-4 min-h-[260px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2601070104856!2d115.22556687417054!3d-8.666795188206313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2408c4dfd9f85%3A0x2d0ee0e62af3d942!2sBendega%20Restaurant!5e0!3m2!1sen!2sid!4v1745166218827!5m2!1sen!2sid"
+            width="300"
+            height="260"
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full"
+          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9779001000766!2d115.17696189999998!3d-8.788146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd245000cbf936b%3A0xa3a669eaefb07afc!2sBendega!5e0!3m2!1sen!2sid!4v1751458638584!5m2!1sen!2sid"
+            width="300"
+            height="260"
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full"
+          />
+        </div>
       </div>
       <div className="border-t border-gray-200 py-2 text-center text-sm text-gray-500">
         <p>© 2025 Bendega Bali</p>
