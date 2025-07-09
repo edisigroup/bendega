@@ -1,4 +1,3 @@
-import Hero from "../components/hero";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { SocialMedia } from "../components/social-media";
@@ -8,7 +7,6 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
-      <Hero isAbout={false} isCuisine={false} />
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col items-start space-y-6">
@@ -29,12 +27,20 @@ export default function Home() {
                     `}
             </p>
           </div>
+          <Image
+            width={1080}
+            height={620}
+            src={`/assets/asset(17).jpg`}
+            alt="Bendega restaurant interior"
+            className={`w-full h-full rounded-full object-cover object-center`}
+            priority
+          />
         </div>
       </div>
       <Image
         width={1080}
         height={620}
-        src={`/galeri/galeri(17).jpg`}
+        src={`/assets/asset(19).jpg`}
         alt="Bendega restaurant interior"
         className={`w-full h-[420px] object-cover object-center`}
         priority

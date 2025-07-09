@@ -43,7 +43,7 @@ export function Email() {
   };
 
   return (
-    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[680px] bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(24).jpeg')]">
+    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[680px] bg-cover bg-center object-start bg-no-repeat bg-[url('/assets/asset(15).jpg')]">
       <div className="absolute sm:block hidden right-6 h-[680px] sm:w-[280px] lg:w-[420px] bg-[#c96c45] -top-10 rounded-xl p-8">
         <div className="w-full h-full flex flex-col justify-center items-center text-center">
           <span className="text-4xl font-bold text-white">

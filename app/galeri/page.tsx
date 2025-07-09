@@ -30,9 +30,29 @@ export default function Galeri() {
 
       <div className="relative w-full h-screen">
         {/* Background image */}
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(10).png')] z-0" />
+        {/* <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(10).png')] z-0" /> */}
+        <Image
+          src="/galeri/galeri(10).png"
+          alt="Background"
+          fill
+          className="absolute inset-0 object-cover object-center z-0"
+          priority
+        />
         {/* Gradient overlay (behind Navbar) */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#c96c45]/50 to-[#c96c45]/10 pointer-events-none z-10" />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(to bottom, rgba(201, 108, 69, 0.5), rgba(201, 108, 69, 0.1))",
+            pointerEvents: "none",
+            zIndex: 10,
+          }}
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#c96c45]/50 to-[#c96c45]/10 pointer-events-none z-10"
+        />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-30">
           <h2 className="uppercase text-6xl sm:text-8xl">Bendega</h2>
           <h2 className="text-base tracking-wide">CITA RASA ASLI INDONESIA</h2>
