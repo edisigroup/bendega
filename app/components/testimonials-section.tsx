@@ -1,6 +1,7 @@
 "use client";
+import { useRef, useEffect } from "react";
 import { TestimonialCard } from "./testimonial-card";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export function TestimonialsSection() {
   const testimonials = [
@@ -33,14 +34,34 @@ export function TestimonialsSection() {
     },
   ];
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-120px" }); // triggers slightly before entering
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden"); // reset when not in view
+    }
+  }, [isInView, controls]);
+
   return (
     <section className="py-12 px-6 md:px-12">
-      <motion.div
-        initial={{ opacity: 0, x: -40 }} // Start lower and invisible
-        animate={{ opacity: 1, x: 0 }} // End at original position and visible
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full"
-      >
+       <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: "easeOut" },
+              },
+            }}
+            className="w-full"
+          >
         <h2 className="text-2xl font-bold text-center mb-10">
           {"Apa Kata Mereka Tentang Kami"}
         </h2>

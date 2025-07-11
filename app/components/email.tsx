@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,8 +21,12 @@ export function Email() {
 
   let phoneNumber = "+6281227014734";
   const handleSubmit = (e: React.FormEvent) => {
-    if(formData.location==="Bendega Renon"){phoneNumber="+6287764078434"}
-    if(formData.location==="Bendega Jimbaran"){phoneNumber="+6281246032899"}
+    if (formData.location === "Bendega Renon") {
+      phoneNumber = "+6287764078434";
+    }
+    if (formData.location === "Bendega Jimbaran") {
+      phoneNumber = "+6281246032899";
+    }
     const messageBody = `
         Hello, Bendega!
             Reservation Details:
@@ -43,8 +48,15 @@ export function Email() {
   };
 
   return (
-    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[680px] bg-cover bg-center object-start bg-no-repeat bg-[url('/assets/asset(15).jpg')]">
-      <div className="absolute sm:block hidden right-6 h-[680px] sm:w-[280px] lg:w-[420px] bg-[#c96c45] -top-10 rounded-xl p-8">
+    <div className="select-none relative p-4 my-20 w-full flex flex-col justify-center h-[680px] z-0">
+      <Image
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+        width={1080}
+        height={680}
+        alt="email"
+        src={"/assets/asset(15).webp"}
+      />
+      <div className="absolute sm:block hidden right-6 h-[680px] sm:w-[280px] lg:w-[420px] bg-[#c96c45] -top-10 rounded-xl p-8 z-40">
         <div className="w-full h-full flex flex-col justify-center items-center text-center">
           <span className="text-4xl font-bold text-white">
             Kami Siap Menyambut Anda
@@ -60,7 +72,8 @@ export function Email() {
               <span className="text-base text-white">📍 Bendega Renon</span>
               <span className="text-sm px-8 text-white">
                 {" "}
-                Jl. Cok Agung Tresna No.37, Dangin Puri Klod, Kec. Denpasar Tim., Kota Denpasar, Bali 80234
+                Jl. Cok Agung Tresna No.37, Dangin Puri Klod, Kec. Denpasar
+                Tim., Kota Denpasar, Bali 80234
               </span>
             </Link>
           )}
@@ -72,7 +85,8 @@ export function Email() {
               <span className="text-base text-white">📍 Bendega Jimbaran</span>
               <span className="text-sm px-8 text-white">
                 {" "}
-                Jl. Raya Kampus Unud No.89, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361
+                Jl. Raya Kampus Unud No.89, Jimbaran, Kec. Kuta Sel., Kabupaten
+                Badung, Bali 80361
               </span>
             </Link>
           )}
@@ -81,7 +95,9 @@ export function Email() {
               <span className="font-bold my-10 text-black text-2xl">
                 📞 (0361) 249555
               </span>
-              <span className="text-base text-white">📍 Meeting/Private Function/Event</span>
+              <span className="text-base text-white">
+                📍 Meeting/Private Function/Event
+              </span>
             </>
           )}
         </div>

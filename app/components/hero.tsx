@@ -18,7 +18,7 @@ export default function Hero({
         {/* Image 1 */}
         <div className={!isAbout ? "w-full" : "w-full sm:w-1/3 h-full order-2"}>
           <Image
-            src={isAbout ? "/assets/asset(11).jpg" : "/galeri/galeri(25).jpeg"}
+            src={isAbout ? "/assets/asset(11).webp" : "/galeri/galeri(25).jpeg"}
             alt="Image 1"
             width={1080}
             height={620}
@@ -33,7 +33,7 @@ export default function Hero({
           }
         >
           <Image
-            src="/assets/asset(16).jpg"
+            src="/assets/asset(16).webp"
             alt="Image 2"
             width={1080}
             height={620}
@@ -49,7 +49,7 @@ export default function Hero({
           }
         >
           <Image
-            src="/assets/asset(15).jpg"
+            src="/assets/asset(15).webp"
             alt="Image 3"
             width={1080}
             height={620}

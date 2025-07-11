@@ -12,7 +12,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Menu", href: "/" },
+  // { label: "Menu", href: "#" },
   { label: "Tentang Kami", href: "/tentang-kami" },
   // { label: "Meeting", href: "/meeting" },
   { label: "Galeri", href: "/galeri" },

@@ -74,7 +74,7 @@ export function Footer() {
             <div className="mt-4 flex">
               <div className="flex gap-2 text-sm text-gray-600">
                 <MailIcon className="h-5 w-5 text-gray-600 hover:text-[#c96c45] transition-colors duration-200" />
-                <span>Marketingbendega@edisigroup.com</span>
+                <span className="break-all break-words">Marketingbendega@edisigroup.com</span>
               </div>
             </div>
           </div>
