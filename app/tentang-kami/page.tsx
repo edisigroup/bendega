@@ -61,18 +61,13 @@ export default function Home() {
             <div className="flex flex-col items-start space-y-6">
               <h2 className="text-4xl font-bold text-black">Tentang Kami</h2>
               <p className="text-black/90 text-base">
-                {`Berdiri sejak tahun 1996 - Bendega selalu konsisten & semangat
-                mempromosikan kuliner khas Bali & Nusantara. Terinspirasi dari resep-resep
-                legenda dan rumahan yang diwariskan turun temurun dari Sabang sampai
-                Merauke, kami ingin memperkenalkan kekayaan kuliner nusantara.`}
-              </p>
-              <p className="text-black/90 text-base">
-                {`Bendega mengkombinasikan resep kuliner tradisional terbaik dengan bahan
-                baku yang fresh dan “locally sourced”, diolah dan disajikan secara modern tanpa
-                mengurangi rasa asli & authentic. Melalui inovasi terus menerus & adaptasi,
-                Bendega selalu menyajikan pilihan kuliner Nusantara terbaik agar dapat
-                dinikmati dari generasi ke generasi.`}
-              </p>
+                {`Bendega – Rasa Indonesia, Cerita yang Tak Pernah Usai
+                Bendega sudah ada sejak 1996, dan sejak awal kami punya satu tujuan: membawa rasa khas Bali dan Nusantara 
+                ke meja makan dengan sepenuh hati.
+                Kami terinspirasi dari resep-resep rumahan dan legenda kuliner yang diwariskan 
+                dari generasi ke generasi—Masakan yang nggak cuma enak, tapi juga penuh cerita dan kenangan.
+                Lewat inovasi dan cinta pada budaya, kami ingin terus berbagi rasa Nusantara`}
+              </p>  
             </div>
           </motion.div>
 

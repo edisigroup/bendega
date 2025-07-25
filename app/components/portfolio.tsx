@@ -31,7 +31,7 @@ export function Portfolio() {
 
   // Top section animation
   const sectionRef = useRef(null);
-  const sectionInView = useInView(sectionRef, { margin: "-160px" });
+  const sectionInView = useInView(sectionRef, { once: true, margin: "-160px" });
   const sectionControls = useAnimation();
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export function Portfolio() {
 
   // Chevron animation
   const chevronRef = useRef(null);
-  const chevronInView = useInView(chevronRef, { margin: "-160px" });
+  const chevronInView = useInView(chevronRef, { once: true, margin: "-160px" });
   const chevronControls = useAnimation();
 
   useEffect(() => {
@@ -80,9 +80,9 @@ export function Portfolio() {
           </div>
           <div className="w-full sm:w-1/2 max-w-md px-4 sm:pl-0">
             <p className="text-black/90 text-sm">
-              Bendega mengkombinasikan resep kuliner tradisional terbaik dengan
-              bahan baku yang fresh dan “locally sourced”, diolah dan disajikan
-              secara modern tanpa mengurangi rasa asli & aunthetic.
+              Bendega - Rasa Indonesia, Cerita yang Tak Pernah Usai. Lewat
+              inovasi dan cinta pada budaya, kami ingin terus berbagi rasa
+              Nusantara.
             </p>
           </div>
         </motion.div>

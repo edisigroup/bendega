@@ -1,6 +1,7 @@
 import Link from "next/link";
 // import { Facebook, Instagram, Twitter } from "lucide-react"
 import { Instagram, MailIcon } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,16 +11,24 @@ export function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link
               href="/"
-              className="font-serif text-2xl italic text-[#c96c45]"
             >
-              Bendega
+              <Image
+                className="sm:w-32 sm:h-10 w-24 h-8"
+                width={200}
+                height={220}
+                alt="logo"
+                src={"/logo-new.png"}
+              />
             </Link>
             <p className="mt-4 text-sm text-gray-600">
-              Berdiri sejak tahun 1996 - Bendega selalu konsisten mempromosikan kuliner khas Bali & Nusantara. 
-            </p>
-            <p className="mt-4 text-sm text-gray-600">
-              Terinspirasi dari resep - resep legenda dan rumahan yang diwariskan turun temurun dari Sabang sampai Merauke , kami ingin memperkenalkan kekayaan kuliner nusantara. Selama bertahun tahun , Bendega mengkombinasikan resep kuliner tradisional terbaik dengan bahan baku yang fresh dan “locally sourced”, diolah dan disajikan secara modern tanpa mengurangi rasa authentic. Melalui inovasi & adaptasi , Bendega 
-              selalu menyajikan pilihan kuliner Nusantara terbaik agar dapat dinikmati dari generasi ke generasi
+              Bendega - Rasa Indonesia, Cerita yang Tak Pernah Usai. Bendega
+              sudah ada sejak 1996, dan sejak awal kami punya satu tujuan:
+              membawa rasa khas Bali dan Nusantara ke meja makan dengan sepenuh
+              hati. Kami terinspirasi dari resep-resep rumahan dan legenda
+              kuliner yang diwariskan dari generasi ke generasi—Masakan yang
+              nggak cuma enak, tapi juga penuh cerita dan kenangan. Lewat
+              inovasi dan cinta pada budaya, kami ingin terus berbagi rasa
+              Nusantara
             </p>
           </div>
 
@@ -74,7 +83,9 @@ export function Footer() {
             <div className="mt-4 flex">
               <div className="flex gap-2 text-sm text-gray-600">
                 <MailIcon className="h-5 w-5 text-gray-600 hover:text-[#c96c45] transition-colors duration-200" />
-                <span className="break-all break-words">Marketingbendega@edisigroup.com</span>
+                <span className="break-all break-words">
+                  Marketingbendega@edisigroup.com
+                </span>
               </div>
             </div>
           </div>

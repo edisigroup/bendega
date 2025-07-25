@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface NavItem {
-  label: string
-  href: string
+  label: string;
+  href: string;
 }
 
 const navItems: NavItem[] = [
@@ -16,26 +17,42 @@ const navItems: NavItem[] = [
   { label: "Tentang Kami", href: "/tentang-kami" },
   // { label: "Meeting", href: "/meeting" },
   { label: "Galeri", href: "/galeri" },
-]
+];
 
-export function Navbar({isTransparent=false}:{isTransparent?:boolean}) {
-  const [isOpen, setIsOpen] = useState(false)
+export function Navbar({ isTransparent = false }: { isTransparent?: boolean }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
-  
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className={`${isTransparent===true?"bg-[#c96c45] sm:bg-transparent absolute w-full":"relative bg-[#c96c45]"} text-white py-4 px-6 md:px-12`}>
+    <nav
+      className={`${
+        isTransparent === true
+          ? "bg-[#c96c45] sm:bg-transparent absolute w-full"
+          : "relative bg-[#c96c45]"
+      } text-white py-4 px-6 md:px-12`}
+    >
       <div className="flex items-center justify-between">
         <Link href="/" className="font-serif text-2xl italic">
-          <span className="text-white">Bendega</span>
+          <Image
+            className="sm:w-32 sm:h-10 w-24 h-8"
+            width={200}
+            height={220}
+            alt="logo"
+            src={"/logo-white.png"}
+          />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <Link key={item.label} href={item.href} className="text-white hover:text-white/80 transition-colors">
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-white hover:text-white/80 transition-colors"
+            >
               {item.label}
             </Link>
           ))}
@@ -57,7 +74,9 @@ export function Navbar({isTransparent=false}:{isTransparent?:boolean}) {
       <div
         className={cn(
           "absolute left-0 right-0 top-full bg-[#c96c45] z-50 shadow-lg md:hidden transition-all duration-300 ease-in-out",
-          isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0 overflow-hidden",
+          isOpen
+            ? "max-h-[300px] opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         )}
       >
         <div className="flex flex-col space-y-4 px-6 py-4">
@@ -74,5 +93,5 @@ export function Navbar({isTransparent=false}:{isTransparent?:boolean}) {
         </div>
       </div>
     </nav>
-  )
+  );
 }

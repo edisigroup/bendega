@@ -18,7 +18,7 @@ export default function Hero({
         {/* Image 1 */}
         <div className={!isAbout ? "w-full" : "w-full sm:w-1/3 h-full order-2"}>
           <Image
-            src={isAbout ? "/assets/asset(11).webp" : "/galeri/galeri(25).jpeg"}
+            src={isAbout ? "/assets/asset(20).webp" : "/assets/asset(19).webp"}
             alt="Image 1"
             width={1080}
             height={620}
