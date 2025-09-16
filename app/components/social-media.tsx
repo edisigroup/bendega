@@ -15,15 +15,24 @@ export function SocialMedia() {
   return (
     <div className="flex flex-col gap-2">
       <section className="py-12 px-6 md:px-12">
-        <h2 className="text-2xl font-bold text-center mb-10">
-          Rasakan Suasana & Cita Rasa Bendega Lewat Instagram!
-        </h2>
+        <div className="w-full flex justify-center">
+          <Image
+            width={208}
+            height={208}
+            src="/logo-ig-text.png"
+            alt="Instagram"
+            className="size-36 object-contain"
+          />
+        </div>
 
         <div className="w-full flex justify-center">
           <div className="max-w-[1024px] w-full">
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 border-b border-[#c96c45] pb-4">
-              {socmed.map((eachSocmed,index) => (
-                <div key={eachSocmed.key} className={`${index>2&&`hidden sm:block`}`}>
+              {socmed.map((eachSocmed, index) => (
+                <div
+                  key={eachSocmed.key}
+                  className={`${index > 2 && `hidden sm:block`}`}
+                >
                   <a
                     href="https://www.instagram.com/bendega.bali"
                     target="_blank"

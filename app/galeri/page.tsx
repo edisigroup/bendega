@@ -28,18 +28,18 @@ export default function Galeri() {
         <Navbar isTransparent={true} />
       </div>
 
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-screen bg-[#c96c45] mb-1">
         {/* Background image */}
         {/* <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/galeri/galeri(10).png')] z-0" /> */}
-        <Image
+        {/* <Image
           src="/galeri/galeri(10).png"
           alt="Background"
           fill
           className="absolute inset-0 object-cover object-center z-0"
           priority
-        />
+        /> */}
         {/* Gradient overlay (behind Navbar) */}
-        <div
+        {/* <div
           style={{
             position: "absolute",
             top: 0,
@@ -52,10 +52,16 @@ export default function Galeri() {
             zIndex: 10,
           }}
           className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#c96c45]/50 to-[#c96c45]/10 pointer-events-none z-10"
-        />
+        /> */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-30">
-          <h2 className="uppercase text-6xl sm:text-8xl">Bendega</h2>
-          <h2 className="text-base tracking-wide">CITA RASA ASLI INDONESIA</h2>
+          <Image
+            className="sm:w-96 sm:min-h-36 w-96 h-12"
+            width={384}
+            height={144}
+            alt="logo"
+            src={"/logo-white.png"}
+          />
+          <h2 className="text-base tracking-wide">SELERA NUSANTARA</h2>
         </div>
       </div>
 
@@ -77,15 +83,25 @@ export default function Galeri() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-[#c26545] hover:shadow-lg hover:bg-[#c26545] hover:shadow-[#c26545] text-white font-normal uppercase border-none"
+                className="bg-[#c96c45] hover:shadow-lg hover:bg-[#c96c45] hover:shadow-[#c26545] text-white font-normal uppercase border-none"
               >
                 Hubungi Kami
               </Button>
             </Link>
           </div>
         </div>
-        <div className="hidden w-full h-full md:w-2/3 md:flex flex-col items-center justify-center text-2xl md:text-6xl bg-[#c26545] px-4 md:px-6">
-          <h2 className="text-white">by EDISI GROUP</h2>
+        <div className="hidden w-full h-full md:w-2/3 md:flex flex-col items-center justify-center text-2xl md:text-6xl bg-[#c96c45] px-4 md:px-6">
+          <div className="text-white flex justify-center w-full">
+            <span className="text-5xl mt-1 italic ml-8">by</span>
+            <Image
+              width={200}
+              height={200}
+              src={"/edisi-logo.webp"}
+              alt="Swings in a garden area"
+              className="w-[220px] h-[80px] object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
 
